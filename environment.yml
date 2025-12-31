@@ -1,0 +1,15 @@
+name: ai_voice
+channels:
+  - nvidia/label/cuda-11.8.0  # Specific channel for your GPU drivers
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - cuda-toolkit
+  - pip
+  - pip:
+    - faster-whisper     # AI Transcription
+    - sounddevice        # Mic access
+    - numpy              # Math/Audio buffers
+    - requests           # Sending text to the other machine
+    - flask              # If you want to host a small API
